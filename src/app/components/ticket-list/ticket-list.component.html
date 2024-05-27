@@ -1,22 +1,15 @@
 <!-- <p>ticket-list works!</p>
-
-src/app/components/ticket-list/ticket-list.component.html 
-
 <div *ngFor="let ticket of tickets" class="ticket-item">
     <p>Ingresso ID: {{ ticket.getId() }}</p>
     <p>Sessão ID: {{ ticket.getSessionId() }}</p>
     <p>Cliente ID: {{ ticket.getClienteId() }}</p>
 </div>-->
 
-<!-- src/app/components/ticket-list/ticket-list.component.html -->
-
 <div class="component container">
-    <h1>Ingressos</h1>
-    <div *ngFor="let ticket of tickets" class="flex-item">
-      <p>Ingresso ID: {{ ticket.getId() }}</p>
-      <p>Sessão ID: {{ ticket.getSessionId() }}</p>
-      <p>Cliente ID: {{ ticket.getClienteId() }}</p>
-    </div>
+  <h1>Ingressos</h1>
+  <div *ngFor="let ticket of tickets" class="flex-item">
+    <p>Ingresso ID: {{ ticket.getId() }}</p>
+    <p>Sessão ID: {{ ticket.getSessionId() }}</p>
+    <p>Cliente ID: {{ ticket.getClienteId() }}</p>
+  </div>
 </div>
-  
-  

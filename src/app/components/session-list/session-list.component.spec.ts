@@ -10,8 +10,8 @@ describe('SessionListComponent', () => {
     await TestBed.configureTestingModule({
       declarations: [SessionListComponent]
     })
-    .compileComponents();
-    
+      .compileComponents();
+
     fixture = TestBed.createComponent(SessionListComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

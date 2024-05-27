@@ -10,8 +10,8 @@ describe('RoomListComponent', () => {
     await TestBed.configureTestingModule({
       declarations: [RoomListComponent]
     })
-    .compileComponents();
-    
+      .compileComponents();
+
     fixture = TestBed.createComponent(RoomListComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

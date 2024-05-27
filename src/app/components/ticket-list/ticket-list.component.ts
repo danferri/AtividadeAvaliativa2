@@ -1,5 +1,3 @@
-// src/app/components/ticket-list/ticket-list.component.ts
-
 import { Component, OnInit } from '@angular/core';
 import { TicketService } from '../../services/ticket.service';
 import { Ticket } from '../../models/ticket.model';
@@ -12,7 +10,7 @@ import { Ticket } from '../../models/ticket.model';
 export class TicketListComponent implements OnInit {
   tickets: Ticket[] = [];
 
-  constructor(private ticketService: TicketService) {}
+  constructor(private ticketService: TicketService) { }
 
   ngOnInit(): void {
     this.ticketService.getTickets().subscribe((data: Ticket[]) => {

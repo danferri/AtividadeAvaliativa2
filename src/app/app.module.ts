@@ -1,5 +1,3 @@
-// src/app/app.module.ts
-
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
@@ -18,19 +16,19 @@ import { TicketService } from './services/ticket.service';
 
 @NgModule({
   declarations: [
-    AppComponent,           // Componente principal da aplicação
-    MovieListComponent,     // Componente para listar filmes
-    CustomerListComponent, 
-    RoomListComponent, 
-    SessionListComponent, 
-    TicketListComponent   // Componente para listar clientes
+    AppComponent,
+    MovieListComponent,
+    CustomerListComponent,
+    RoomListComponent,
+    SessionListComponent,
+    TicketListComponent
   ],
   imports: [
-    BrowserModule,          // Módulo necessário para rodar a aplicação no navegador
-    HttpClientModule        // Módulo para realizar requisições HTTP
+    BrowserModule,
+    HttpClientModule
   ],
-  providers: [TmdbService, DataService, RoomService, SessionService, TicketService],  // Serviços utilizados na aplicação
-  bootstrap: [AppComponent]  // Componente que será carregado inicialmente
+  providers: [TmdbService, DataService, RoomService, SessionService, TicketService],
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
 

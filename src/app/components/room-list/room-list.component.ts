@@ -1,5 +1,3 @@
-// src/app/components/room-list/room-list.component.ts
-
 import { Component, OnInit } from '@angular/core';
 import { RoomService } from '../../services/room.service';
 import { Room } from '../../models/room.model';
@@ -12,7 +10,7 @@ import { Room } from '../../models/room.model';
 export class RoomListComponent implements OnInit {
   rooms: Room[] = [];
 
-  constructor(private roomService: RoomService) {}
+  constructor(private roomService: RoomService) { }
 
   ngOnInit(): void {
     this.roomService.getRooms().subscribe((data: Room[]) => {
