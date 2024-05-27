@@ -2,8 +2,9 @@
 
 <!-- src/app/components/movie-list/movie-list.component.html -->
 
-<div *ngFor="let movie of movies">
+<div *ngFor="let movie of movies" class="movie-item">
     <h2>{{ movie.title }}</h2>
+    <img [src]="'https://image.tmdb.org/t/p/w500' + movie.poster_path" alt="{{ movie.title }} poster">
     <p>{{ movie.overview }}</p>
     <small>Data de lançamento: {{ movie.release_date }}</small>
 </div>

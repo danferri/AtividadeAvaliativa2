@@ -15,11 +15,11 @@ export class TmdbService {
 
   // Método para obter filmes em cartaz
   getMovies(): Observable<any> {
-    return this.http.get(`${this.apiUrl}/movie/now_playing?api_key=${this.apiKey}`);
+    return this.http.get(`${this.apiUrl}/movie/now_playing?api_key=${this.apiKey}&language=pt-BR`);
   }
 
   // Método para obter detalhes de um filme específico
   getMovieDetails(movieId: number): Observable<any> {
-    return this.http.get(`${this.apiUrl}/movie/${movieId}?api_key=${this.apiKey}`);
+    return this.http.get(`${this.apiUrl}/movie/${movieId}?api_key=${this.apiKey}&language=pt-BR`);
   }
 }
