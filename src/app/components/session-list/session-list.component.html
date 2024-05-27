@@ -3,7 +3,7 @@
     <h2>Filme ID: {{ session.getMovieId() }}</h2>
     <p>Sala ID: {{ session.getRoomId() }}</p>
     <p>Horário: {{ session.getHorario() | date: 'short' }}</p>
-</div> -->
+</div>
 
 <div class="component container">
   <h1>Sessões de Filmes</h1>
@@ -12,5 +12,17 @@
     <p>Sala ID: {{ session.getRoomId() }}</p>
     <p>Filme ID: {{ session.getMovieId() }}</p>
     <p>Horário: {{ session.getHorario() | date: 'short' }}</p>
+  </div>
+</div> -->
+
+<div class="component container">
+  <h1>Sessões de Filmes</h1>
+  <div class="flex-container">
+    <div *ngFor="let session of sessions" class="flex-item">
+      <h2>Sessão {{ session.getId() }}</h2>
+      <p>Sala ID: {{ session.getRoomId() }}</p>
+      <p>Filme ID: {{ session.getMovieId() }}</p>
+      <p>Horário: {{ session.getHorario() | date: 'short' }}</p>
+    </div>
   </div>
 </div>

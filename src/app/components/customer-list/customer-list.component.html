@@ -3,7 +3,7 @@
     <h2>{{ customer.getPrimeiroNome() }} {{ customer.getUltimoNome() }}</h2>
     <p>Email: {{ customer.getEmail() }}</p>
     <p>Status: {{ customer.getAtivo() ? 'Ativo' : 'Inativo' }}</p>
-</div>-->
+</div>
 
 <div class="component container">
   <h1>Lista de Clientes</h1>
@@ -11,5 +11,16 @@
     <h2>{{ customer.getPrimeiroNome() }} {{ customer.getUltimoNome() }}</h2>
     <p>Email: {{ customer.getEmail() }}</p>
     <p>Status: {{ customer.getAtivo() ? 'Ativo' : 'Inativo' }}</p>
+  </div>
+</div>-->
+
+<div class="component container">
+  <h1>Lista de Clientes</h1>
+  <div class="flex-container">
+    <div *ngFor="let customer of customers" class="flex-item">
+      <h2>{{ customer.getPrimeiroNome() }} {{ customer.getUltimoNome() }}</h2>
+      <p>Email: {{ customer.getEmail() }}</p>
+      <p>Status: {{ customer.getAtivo() ? 'Ativo' : 'Inativo' }}</p>
+    </div>
   </div>
 </div>

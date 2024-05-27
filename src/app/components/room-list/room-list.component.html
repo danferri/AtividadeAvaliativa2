@@ -2,12 +2,22 @@
 <div *ngFor="let room of rooms" class="room-item">
     <h2>{{ room.getNome() }}</h2>
     <p>Capacidade: {{ room.getCapacidade() }}</p>
-</div> -->
+</div> 
 
 <div class="component container">
   <h1>Salas de Cinema</h1>
   <div *ngFor="let room of rooms" class="flex-item">
     <h2>{{ room.getNome() }}</h2>
     <p>Capacidade: {{ room.getCapacidade() }}</p>
+  </div>
+</div>-->
+
+<div class="component container">
+  <h1>Salas de Cinema</h1>
+  <div class="flex-container">
+    <div *ngFor="let room of rooms" class="flex-item">
+      <h2>{{ room.getNome() }}</h2>
+      <p>Capacidade: {{ room.getCapacidade() }}</p>
+    </div>
   </div>
 </div>
