@@ -1,0 +1,20 @@
+<!--<p>room-list works!</p>
+
+ src/app/components/room-list/room-list.component.html
+
+<div *ngFor="let room of rooms" class="room-item">
+    <h2>{{ room.getNome() }}</h2>
+    <p>Capacidade: {{ room.getCapacidade() }}</p>
+</div> -->
+
+<!-- src/app/components/room-list/room-list.component.html -->
+
+<div class="component container">
+    <h1>Salas de Cinema</h1>
+    <div *ngFor="let room of rooms" class="flex-item">
+      <h2>{{ room.getNome() }}</h2>
+      <p>Capacidade: {{ room.getCapacidade() }}</p>
+    </div>
+</div>
+  
+  

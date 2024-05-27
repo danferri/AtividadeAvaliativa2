@@ -1,0 +1,23 @@
+<!--<p>session-list works!</p>
+
+ src/app/components/session-list/session-list.component.html
+
+<div *ngFor="let session of sessions" class="session-item">
+    <h2>Filme ID: {{ session.getMovieId() }}</h2>
+    <p>Sala ID: {{ session.getRoomId() }}</p>
+    <p>Horário: {{ session.getHorario() | date: 'short' }}</p>
+</div> -->
+
+<!-- src/app/components/session-list/session-list.component.html -->
+
+<div class="component container">
+    <h1>Sessões de Filmes</h1>
+    <div *ngFor="let session of sessions" class="flex-item">
+      <h2>Sessão {{ session.getId() }}</h2>
+      <p>Sala ID: {{ session.getRoomId() }}</p>
+      <p>Filme ID: {{ session.getMovieId() }}</p>
+      <p>Horário: {{ session.getHorario() | date: 'short' }}</p>
+    </div>
+</div>
+  
+  

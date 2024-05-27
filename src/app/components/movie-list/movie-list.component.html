@@ -1,11 +1,26 @@
-<p>movie-list works!</p>
+<!-- <p>movie-list works!</p>
 
-<!-- src/app/components/movie-list/movie-list.component.html -->
+ src/app/components/movie-list/movie-list.component.html
 
 <div *ngFor="let movie of movies" class="movie-item">
     <h2>{{ movie.title }}</h2>
     <img [src]="'https://image.tmdb.org/t/p/w500' + movie.poster_path" alt="{{ movie.title }} poster">
     <p>{{ movie.overview }}</p>
     <small>Data de lançamento: {{ movie.release_date }}</small>
+</div> -->
+
+<!-- src/app/components/movie-list/movie-list.component.html -->
+
+<div class="component container">
+    <h1>Filmes em Cartaz</h1>
+    <div class="flex-container">
+      <div *ngFor="let movie of movies" class="flex-item">
+        <h2>{{ movie.title }}</h2>
+        <img [src]="'https://image.tmdb.org/t/p/w500' + movie.poster_path" alt="{{ movie.title }} poster">
+        <p>{{ movie.overview }}</p>
+        <small>Data de lançamento: {{ movie.release_date }}</small>
+      </div>
+    </div>
 </div>
+  
   
