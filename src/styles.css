@@ -1,70 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
 
-/* Estilos Globais
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
-}
-  
-.container {
-    width: 90%;
-    margin: 0 auto;
-    padding: 20px;
-}
-  
-h1 {
-    text-align: center;
-    color: #333;
-}
-  
-h2 {
-    color: #555;
-}
-  
-p {
-    color: #666;
-}
-  
-  /* Estilo para os Componentes 
-.component {
-    background-color: #fff;
-    margin-bottom: 20px;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-  
-.component h2 {
-    margin-top: 0;
-}
-  
-.component img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 5px;
-}
-  
-  /* Layout Flexível para Listas 
-.flex-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-  
-.flex-item {
-    flex: 1 1 200px;
-    max-width: 300px;
-    box-sizing: border-box;
-}
-  
-@media (max-width: 768px) {
-    .flex-item {
-      flex: 1 1 100%;
-    }
-} */
-
 /* src/styles.css */
 
 /* Variáveis CSS para Consistência */
@@ -79,6 +14,8 @@ p {
     --container-width: 90%;
     --container-margin: 0 auto;
     --container-padding: 20px;
+    --poster-height: 300px;
+    /* Definindo uma altura fixa para os cartazes */
 }
 
 /* Estilos Globais */
@@ -122,8 +59,11 @@ p {
 }
 
 .component img {
-    max-width: 100%;
-    height: auto;
+    width: 100%;
+    height: var(--poster-height);
+    /* Aplicando a altura fixa aos cartazes */
+    object-fit: cover;
+    /* Garantindo que a imagem se ajuste ao espaço definido */
     border-radius: var(--border-radius);
 }
 
@@ -138,6 +78,9 @@ p {
     flex: 1 1 200px;
     max-width: 300px;
     box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    /* Garantindo que o conteúdo flua de cima para baixo */
 }
 
 @media (max-width: 768px) {
@@ -145,6 +88,7 @@ p {
         flex: 1 1 100%;
     }
 }
+
 
 @keyframes fadeIn {
     from {
