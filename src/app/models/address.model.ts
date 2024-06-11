@@ -7,7 +7,16 @@ export class Address {
   private cidade: string;
   private bairro: string;
 
-  constructor(id: number, rua: string, numero: number, cep: string, telefone: string, cidade: string, bairro: string) {
+  constructor(
+    id: number,
+    rua: string,
+    numero: number,
+    cep: string,
+    telefone: string,
+    cidade: string,
+    bairro: string
+  ) {
+    
     this.id = id;
     this.rua = rua;
     this.numero = numero;

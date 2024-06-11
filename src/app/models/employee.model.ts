@@ -8,10 +8,16 @@ export class Employee {
   private ativo: boolean;
   private senha: string;
 
-  constructor(id: number, enderecoId: number, pagamentoId: number, primeiro_nome: string, ultimo_nome: string, email: string,
+  constructor(id: number,
+    enderecoId: number,
+    pagamentoId: number,
+    primeiro_nome: string,
+    ultimo_nome: string,
+    email: string,
     ativo: boolean,
     senha: string
   ) {
+
     this.id = id;
     this.enderecoId = enderecoId;
     this.pagamentoId = pagamentoId;

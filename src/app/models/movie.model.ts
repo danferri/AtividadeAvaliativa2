@@ -10,12 +10,18 @@ export class Movie {
   private avaliacao: number;
   private linguagemId: number;
 
-  constructor(id: number, titulo: string, descricao: string, ano_release: number, duracao_aluguel: number, taxa_aluguel: number,
+  constructor(id: number,
+    titulo: string,
+    descricao: string,
+    ano_release: number,
+    duracao_aluguel: number,
+    taxa_aluguel: number,
     duracao: number,
     custo_reposicao: number,
     avaliacao: number,
     linguagemId: number
   ) {
+
     this.id = id;
     this.titulo = titulo;
     this.descricao = descricao;

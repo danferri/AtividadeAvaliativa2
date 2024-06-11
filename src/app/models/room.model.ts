@@ -9,7 +9,6 @@ export class Room {
     this.capacidade = capacidade;
   }
 
-
   getId() {
     return this.id;
   }

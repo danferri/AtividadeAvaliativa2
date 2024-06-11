@@ -3,7 +3,6 @@ export class Ticket {
   private sessionId: number;
   private clienteId: number;
 
-
   constructor(id: number, sessionId: number, clienteId: number) {
     this.id = id;
     this.sessionId = sessionId;
