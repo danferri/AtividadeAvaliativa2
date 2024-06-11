@@ -7,13 +7,16 @@ import { Ticket } from '../models/ticket.model';
 })
 export class TicketService {
 
-  constructor() { }
+  private TicketsList: Ticket[];
 
-  getTickets(): Observable<Ticket[]> {
-    return of([
+  constructor() {
+    this.TicketsList = [
       new Ticket(1, 1, 1),
       new Ticket(2, 2, 2),
+    ];
+  }
 
-    ]);
+  getTickets(): Observable<Ticket[]> {
+    return of(this.TicketsList);
   }
 }
