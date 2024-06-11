@@ -1,18 +1,23 @@
-<div class="component container">
-    <h1>Cadastrar Sala</h1>
+<div class="form-container">
+    <h1 class="form-title">Cadastrar Sala</h1>
     <form [formGroup]="roomForm" (ngSubmit)="onSubmit()">
-        <label for="nome">Nome:</label>
-        <input id="nome" formControlName="nome">
-        <div *ngIf="roomForm.get('nome')?.invalid && roomForm.get('nome')?.touched">
-            Nome é obrigatório.
+        <div class="form-group">
+            <label for="nome">Nome da Sala:</label>
+            <input id="nome" formControlName="nome" placeholder="Digite o nome da sala">
+            <div *ngIf="roomForm.get('nome')?.invalid && roomForm.get('nome')?.touched" class="error-message">
+                Nome é obrigatório.
+            </div>
         </div>
-    
-        <label for="capacidade">Capacidade:</label>
-        <input id="capacidade" type="number" formControlName="capacidade">
-        <div *ngIf="roomForm.get('capacidade')?.invalid && roomForm.get('capacidade')?.touched">
-            Capacidade deve ser um número positivo.
+
+        <div class="form-group">
+            <label for="capacidade">Capacidade:</label>
+            <input id="capacidade" type="number" formControlName="capacidade" placeholder="Digite a capacidade da sala">
+            <div *ngIf="roomForm.get('capacidade')?.invalid && roomForm.get('capacidade')?.touched"
+                class="error-message">
+                Capacidade deve ser um número positivo.
+            </div>
         </div>
-    
-        <button type="submit" [disabled]="roomForm.invalid">Cadastrar</button>
+
+        <button type="submit" class="form-button" [disabled]="roomForm.invalid">Cadastrar</button>
     </form>
 </div>

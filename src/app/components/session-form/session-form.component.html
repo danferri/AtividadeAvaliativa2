@@ -1,24 +1,30 @@
-<div class="component container">
-    <h1>Cadastrar Sessão</h1>
-    <form [formGroup]="sessionForm" (ngSubmit)="onSubmit()">
+<div class="form-container">
+  <h1 class="form-title">Cadastrar Sessão</h1>
+  <form [formGroup]="sessionForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
       <label for="roomId">ID da Sala:</label>
-      <input id="roomId" formControlName="roomId">
-      <div *ngIf="sessionForm.get('roomId')?.invalid && sessionForm.get('roomId')?.touched">
+      <input id="roomId" type="number" formControlName="roomId" placeholder="Digite o ID da sala">
+      <div *ngIf="sessionForm.get('roomId')?.invalid && sessionForm.get('roomId')?.touched" class="error-message">
         ID da sala é obrigatório.
       </div>
-  
+    </div>
+
+    <div class="form-group">
       <label for="movieId">ID do Filme:</label>
-      <input id="movieId" formControlName="movieId">
-      <div *ngIf="sessionForm.get('movieId')?.invalid && sessionForm.get('movieId')?.touched">
+      <input id="movieId" type="number" formControlName="movieId" placeholder="Digite o ID do filme">
+      <div *ngIf="sessionForm.get('movieId')?.invalid && sessionForm.get('movieId')?.touched" class="error-message">
         ID do filme é obrigatório.
       </div>
-  
+    </div>
+
+    <div class="form-group">
       <label for="horario">Horário:</label>
       <input id="horario" type="datetime-local" formControlName="horario">
-      <div *ngIf="sessionForm.get('horario')?.invalid && sessionForm.get('horario')?.touched">
+      <div *ngIf="sessionForm.get('horario')?.invalid && sessionForm.get('horario')?.touched" class="error-message">
         Horário é obrigatório.
       </div>
-  
-      <button type="submit" [disabled]="sessionForm.invalid">Cadastrar</button>
-    </form>
-  </div>
+    </div>
+
+    <button type="submit" class="form-button" [disabled]="sessionForm.invalid">Cadastrar</button>
+  </form>
+</div>

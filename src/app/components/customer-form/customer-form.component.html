@@ -1,27 +1,37 @@
-<div class="component container">
-    <h1>Cadastrar Cliente</h1>
-    <form [formGroup]="customerForm" (ngSubmit)="onSubmit()">
+<div class="form-container">
+  <h1 class="form-title">Cadastrar Cliente</h1>
+  <form [formGroup]="customerForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
       <label for="primeiro_nome">Primeiro Nome:</label>
-      <input id="primeiro_nome" formControlName="primeiro_nome">
-      <div *ngIf="customerForm.get('primeiro_nome')?.invalid && customerForm.get('primeiro_nome')?.touched">
+      <input id="primeiro_nome" formControlName="primeiro_nome" placeholder="Digite o primeiro nome">
+      <div *ngIf="customerForm.get('primeiro_nome')?.invalid && customerForm.get('primeiro_nome')?.touched"
+        class="error-message">
         Primeiro nome é obrigatório.
       </div>
-  
+    </div>
+
+    <div class="form-group">
       <label for="ultimo_nome">Último Nome:</label>
-      <input id="ultimo_nome" formControlName="ultimo_nome">
-      <div *ngIf="customerForm.get('ultimo_nome')?.invalid && customerForm.get('ultimo_nome')?.touched">
+      <input id="ultimo_nome" formControlName="ultimo_nome" placeholder="Digite o último nome">
+      <div *ngIf="customerForm.get('ultimo_nome')?.invalid && customerForm.get('ultimo_nome')?.touched"
+        class="error-message">
         Último nome é obrigatório.
       </div>
-  
+    </div>
+
+    <div class="form-group">
       <label for="email">Email:</label>
-      <input id="email" formControlName="email">
-      <div *ngIf="customerForm.get('email')?.invalid && customerForm.get('email')?.touched">
+      <input id="email" type="email" formControlName="email" placeholder="Digite o email">
+      <div *ngIf="customerForm.get('email')?.invalid && customerForm.get('email')?.touched" class="error-message">
         Email deve ser válido.
       </div>
-  
+    </div>
+
+    <div class="form-group">
       <label for="ativo">Ativo:</label>
       <input id="ativo" type="checkbox" formControlName="ativo">
-  
-      <button type="submit" [disabled]="customerForm.invalid">Cadastrar</button>
-    </form>
-  </div>
+    </div>
+
+    <button type="submit" class="form-button" [disabled]="customerForm.invalid">Cadastrar</button>
+  </form>
+</div>
