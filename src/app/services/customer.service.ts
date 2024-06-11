@@ -21,5 +21,9 @@ export class CustomerService {
   getCustomers(): Observable<Customer[]> {
     return of(this.CustomersList);
   }
+
+  addCustomer(customer: Customer) {
+    this.CustomersList.push(customer);
+  }
 }
 

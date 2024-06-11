@@ -12,7 +12,6 @@ export class MovieListComponent implements OnInit {
   constructor(private tmdbService: TmdbService) { }
 
   ngOnInit(): void {
-
     this.tmdbService.getMovies().subscribe((response: any) => {
       this.movies = response.results;
     });

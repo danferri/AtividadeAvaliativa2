@@ -19,4 +19,8 @@ export class RoomService {
   getRooms(): Observable<Room[]> {
     return of(this.RoomsList);
   }
+
+  addRoom(room: Room) {
+    this.RoomsList.push(room);
+  }
 }

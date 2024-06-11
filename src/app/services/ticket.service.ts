@@ -19,4 +19,8 @@ export class TicketService {
   getTickets(): Observable<Ticket[]> {
     return of(this.TicketsList);
   }
+
+  addTicket(ticket: Ticket) {
+    this.TicketsList.push(ticket);
+  }
 }

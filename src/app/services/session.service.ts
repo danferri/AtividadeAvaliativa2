@@ -19,4 +19,8 @@ export class SessionService {
   getSessions(): Observable<Session[]> {
     return of(this.SessionsList);
   }
+
+  addSession(session: Session) {
+    this.SessionsList.push(session);
+  }
 }
