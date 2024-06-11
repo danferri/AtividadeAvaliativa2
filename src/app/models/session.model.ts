@@ -1,11 +1,10 @@
 export class Session {
-  private id: number;
+  private id: number = -1;
   private roomId: number;
   private movieId: number;
   private horario: Date;
 
-  constructor(id: number, roomId: number, movieId: number, horario: Date) {
-    this.id = id;
+  constructor(roomId: number, movieId: number, horario: Date) {
     this.roomId = roomId;
     this.movieId = movieId;
     this.horario = horario;
@@ -13,6 +12,11 @@ export class Session {
 
   getId() {
     return this.id;
+  }
+
+  setId(id: number) {
+    this.id = id;
+    return this;
   }
 
   getRoomId() {

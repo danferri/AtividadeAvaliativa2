@@ -7,20 +7,20 @@ import { Ticket } from '../models/ticket.model';
 })
 
 export class TicketService {
-  private TicketsList: Ticket[];
+  private ticketsList: Ticket[];
 
   constructor() {
-    this.TicketsList = [
+    this.ticketsList = [
       new Ticket(1, 1, 1),
       new Ticket(2, 2, 2),
     ];
   }
 
   getTickets(): Observable<Ticket[]> {
-    return of(this.TicketsList);
+    return of(this.ticketsList);
   }
 
   addTicket(ticket: Ticket) {
-    this.TicketsList.push(ticket);
+    this.ticketsList.push(ticket);
   }
 }

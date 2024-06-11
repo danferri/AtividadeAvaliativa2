@@ -1,23 +1,21 @@
 import { Address } from "./address.model";
 
 export class Customer {
-  private id: number;
-  private endereco: Address;
+  private id: number = -1;
+  private endereco: Address | null;
   private primeiro_nome: string;
   private ultimo_nome: string;
   private email: string;
   private ativo: boolean;
 
   constructor(
-    id: number,
-    endereco: Address,
+    endereco: Address | null,
     primeiro_nome: string,
     ultimo_nome: string,
     email: string,
     ativo: boolean,
   ) {
     
-    this.id = id;
     this.endereco = endereco;
     this.primeiro_nome = primeiro_nome;
     this.ultimo_nome = ultimo_nome;
@@ -27,6 +25,11 @@ export class Customer {
 
   getId() {
     return this.id;
+  }
+
+  setId(id: number) {
+    this.id = id;
+    return this;
   }
 
   getEndereco() {

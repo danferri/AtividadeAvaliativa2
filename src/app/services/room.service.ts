@@ -16,7 +16,7 @@ export class RoomService {
       new Room('Sala 2', 150).setId(2),
     ];
 
-    this.roomCurrentId = this.roomsList.length;
+    this.roomCurrentId = this.roomsList.length + 1;
   }
 
   getRooms(): Observable<Room[]> {
@@ -24,7 +24,7 @@ export class RoomService {
   }
 
   addRoom(room: Room) {
-    room.setId(++this.roomCurrentId);
+    room.setId(this.roomCurrentId++);
 
     this.roomsList.push(room);
   }

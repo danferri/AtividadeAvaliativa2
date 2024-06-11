@@ -14,9 +14,7 @@ export class CustomerListComponent implements OnInit {
   constructor(private customerService: CustomerService) { }
 
   addCustomer() {
-    this.customerService.addCustomer(
-      new Customer(1, new Address(1, 'Rua Principal', 123, '12345-678', '123-456-7890', 'Cidade Exemplo', 'Centro'), 'Dan', 'Nameless', 'dan@dan.com.br', true),
-    )
+    
   }
 
   ngOnInit(): void {

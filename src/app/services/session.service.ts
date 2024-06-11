@@ -7,20 +7,25 @@ import { Session } from '../models/session.model';
 })
 
 export class SessionService {
-  private SessionsList: Session[];
+  private sessionsList: Session[];
+  private currentSessionId: number;
 
   constructor() {
-    this.SessionsList = [
-      new Session(1, 1, 1, new Date('2023-05-27T14:00:00')),
-      new Session(2, 2, 2, new Date('2023-05-27T17:00:00')),
-    ]
+    this.sessionsList = [
+      new Session(1, 1, new Date('2023-05-27T14:00:00')).setId(1),
+      new Session(2, 2, new Date('2023-05-27T17:00:00')).setId(2),
+    ];
+
+    this.currentSessionId = this.sessionsList.length + 1;
   }
 
   getSessions(): Observable<Session[]> {
-    return of(this.SessionsList);
+    return of(this.sessionsList);
   }
 
   addSession(session: Session) {
-    this.SessionsList.push(session);
+    session.setId(this.currentSessionId++);
+
+    this.sessionsList.push(session);
   }
 }
