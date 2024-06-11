@@ -13,6 +13,10 @@ import { TicketListComponent } from './components/ticket-list/ticket-list.compon
 import { RoomService } from './services/room.service';
 import { SessionService } from './services/session.service';
 import { TicketService } from './services/ticket.service';
+import { ReactiveFormsModule } from '@angular/forms';
+import { CustomerFormComponent } from './components/customer-form/customer-form.component';
+import { RoomFormComponent } from './components/room-form/room-form.component';
+import { SessionFormComponent } from './components/session-form/session-form.component';
 
 @NgModule({
   declarations: [
@@ -21,11 +25,15 @@ import { TicketService } from './services/ticket.service';
     CustomerListComponent,
     RoomListComponent,
     SessionListComponent,
-    TicketListComponent
+    TicketListComponent,
+    CustomerFormComponent,
+    RoomFormComponent,
+    SessionFormComponent
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [TmdbService, CustomerService, RoomService, SessionService, TicketService],
   bootstrap: [AppComponent]
