@@ -5,8 +5,8 @@ import { Ticket } from '../models/ticket.model';
 @Injectable({
   providedIn: 'root'
 })
-export class TicketService {
 
+export class TicketService {
   private TicketsList: Ticket[];
 
   constructor() {

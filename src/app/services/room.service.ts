@@ -5,8 +5,8 @@ import { Room } from '../models/room.model';
 @Injectable({
   providedIn: 'root'
 })
-export class RoomService {
 
+export class RoomService {
   private RoomsList: Room[];
 
   constructor() {
