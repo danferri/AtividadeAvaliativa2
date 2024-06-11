@@ -1,1 +1,24 @@
-<p>session-form works!</p>
+<div class="component container">
+    <h1>Cadastrar Sessão</h1>
+    <form [formGroup]="sessionForm" (ngSubmit)="onSubmit()">
+      <label for="roomId">ID da Sala:</label>
+      <input id="roomId" formControlName="roomId">
+      <div *ngIf="sessionForm.get('roomId')?.invalid && sessionForm.get('roomId')?.touched">
+        ID da sala é obrigatório.
+      </div>
+  
+      <label for="movieId">ID do Filme:</label>
+      <input id="movieId" formControlName="movieId">
+      <div *ngIf="sessionForm.get('movieId')?.invalid && sessionForm.get('movieId')?.touched">
+        ID do filme é obrigatório.
+      </div>
+  
+      <label for="horario">Horário:</label>
+      <input id="horario" type="datetime-local" formControlName="horario">
+      <div *ngIf="sessionForm.get('horario')?.invalid && sessionForm.get('horario')?.touched">
+        Horário é obrigatório.
+      </div>
+  
+      <button type="submit" [disabled]="sessionForm.invalid">Cadastrar</button>
+    </form>
+  </div>
