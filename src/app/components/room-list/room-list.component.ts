@@ -7,6 +7,7 @@ import { Room } from '../../models/room.model';
   templateUrl: './room-list.component.html',
   styleUrls: ['./room-list.component.css']
 })
+
 export class RoomListComponent implements OnInit {
   rooms: Room[] = [];
 

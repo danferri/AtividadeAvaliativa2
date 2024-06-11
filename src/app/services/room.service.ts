@@ -7,20 +7,25 @@ import { Room } from '../models/room.model';
 })
 
 export class RoomService {
-  private RoomsList: Room[];
+  private roomsList: Room[];
+  private roomCurrentId: number;
 
   constructor() {
-    this.RoomsList = [
-      new Room(1, 'Sala 1', 100),
-      new Room(2, 'Sala 2', 150),
+    this.roomsList = [
+      new Room('Sala 1', 100).setId(1),
+      new Room('Sala 2', 150).setId(2),
     ];
+
+    this.roomCurrentId = this.roomsList.length;
   }
 
   getRooms(): Observable<Room[]> {
-    return of(this.RoomsList);
+    return of(this.roomsList);
   }
 
   addRoom(room: Room) {
-    this.RoomsList.push(room);
+    room.setId(++this.roomCurrentId);
+
+    this.roomsList.push(room);
   }
 }
