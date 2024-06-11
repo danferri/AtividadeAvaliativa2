@@ -29,7 +29,7 @@ export class Customer {
     return this.id;
   }
 
-  getEnderecoId() {
+  getEndereco() {
     return this.endereco;
   }
 
