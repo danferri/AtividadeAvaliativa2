@@ -1,8 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 
-/* src/styles.css */
 
-/* Variáveis CSS para Consistência */
 :root {
     --primary-color: #333;
     --secondary-color: #555;
@@ -15,10 +13,9 @@
     --container-margin: 0 auto;
     --container-padding: 20px;
     --poster-height: 300px;
-    /* Definindo uma altura fixa para os cartazes */
+    
 }
 
-/* Estilos Globais */
 body {
     font-family: Arial, sans-serif;
     background-color: var(--background-color);
@@ -45,7 +42,6 @@ p {
     color: var(--text-color);
 }
 
-/* Estilo para os Componentes */
 .component {
     background-color: var(--card-background);
     margin-bottom: 20px;
@@ -61,13 +57,10 @@ p {
 .component img {
     width: 100%;
     height: var(--poster-height);
-    /* Aplicando a altura fixa aos cartazes */
     object-fit: cover;
-    /* Garantindo que a imagem se ajuste ao espaço definido */
     border-radius: var(--border-radius);
 }
 
-/* Layout Flexível para Listas */
 .flex-container {
     display: flex;
     flex-wrap: wrap;
@@ -80,7 +73,6 @@ p {
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    /* Garantindo que o conteúdo flua de cima para baixo */
 }
 
 @media (max-width: 768px) {
